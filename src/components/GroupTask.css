@@ -1,0 +1,78 @@
+.grouptask-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 736px;
+  position: absolute;
+  left: calc(50% - 736px/2);
+  top: 291px;
+}
+
+.grouptask-header {
+  width: 736px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-create{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4EA8DE;
+}
+
+.p-completed {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8284FA;
+}
+
+.count-create {
+  
+}
+
+.grouptask-content{
+  width: 736px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #262626;
+  border-radius: 8px;
+}
+
+.cliptask{
+  padding-top: 64px;
+}
+
+.p-clip1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  padding-top: 16px;
+
+
+  text-align: center;
+
+  color: #808080;
+}
+
+.p-clip2 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+  text-align: center;
+
+  color: #262626;
+}

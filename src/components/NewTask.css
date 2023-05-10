@@ -1,0 +1,43 @@
+.newtask-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  position: absolute;
+  width: 736px;
+  height: 54px;
+  left: calc(50% - 736px/2);
+  top: 173px;
+}
+
+.newtask-input{ 
+  width: 638px;
+  height: 50px;
+  background: #262626;
+  border: 1px solid #0D0D0D;
+  padding-left: 16px;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #808080;
+}
+
+.newtast-button{
+  width: 90px;
+  height: 52px;
+  background: #1E6F9F;
+  border-radius: 8px;font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: #F2F2F2;
+  border: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
