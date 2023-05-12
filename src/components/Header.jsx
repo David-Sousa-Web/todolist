@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css'
 import Icon from '../Logo'
-import NewTask from './NewTask'
 
 
 export default function Header() {
@@ -10,8 +9,6 @@ export default function Header() {
       <header className='header'>
         <Icon />
       </header>
-
-      <NewTask />
     </>
   )
 }
