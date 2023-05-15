@@ -14,8 +14,6 @@
 
 .check-task{
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   width: 24px;
   height: 24px;
   border: 2px solid #4EA8DE;
@@ -34,6 +32,11 @@
   opacity: 0.7;
 }
 
+.check-task:checked + p{
+  text-decoration: line-through;
+  color: #808080;
+}
+
 .p-task {
   font-weight: 400;
   font-size: 16px;
@@ -48,4 +51,8 @@
 .trash-button:hover {
   background: #333333;
   border-radius: 4px;
+}
+
+.trash-button:hover .trash-icon {
+  fill: #E25858;
 }

@@ -6,10 +6,11 @@ import Iconmais from '../Iconmais'
 
 export default function GroupTask() {
   const [tasks, setTasks] = useState([
-    'durma hj'
+    'durma hj', 'durma amanhã'
   ])
 
   const [newTask, setNewTask] = useState('')
+  const [completedTasks, setCompletedTasks] = useState(0)
 
   function HandleCreateNewTask(event) {
     event.preventDefault()
@@ -17,7 +18,6 @@ export default function GroupTask() {
     setTasks([...tasks, newTask]);
     setNewTask('');
   }
-
 
   function deleteTask(taskToDelete) {
     const taskWithoutDeletedOne = tasks.filter(task => {
@@ -32,12 +32,20 @@ export default function GroupTask() {
     setNewTask(event.target.value);
   }
   
-
   function handleNewTaskInvalid(event) {
     event.target.setCustomValidity('Esse campo é Obrigatório!!')
   }
 
 
+  function handleTaskComplete(checked) {
+    if (checked) {
+      setCompletedTasks(prevCompletedTasks => prevCompletedTasks + 1);
+    } else {
+      setCompletedTasks(prevCompletedTasks => prevCompletedTasks - 1);
+    }
+  }
+
+  const completedText = completedTasks > 0 ? `${completedTasks} de ${tasks.length}` : '0';
 
   return (
     <section className='grouptask'>
@@ -48,8 +56,8 @@ export default function GroupTask() {
       
       <div className='grouptask-container'>
         <div className='grouptask-header'>
-          <p className='p-create'>Tarefas criadas <strong className='count-create'>0</strong></p>
-          <p className='p-completed'>Concluidas <strong className='count-completed'>0</strong></p>
+          <p className='p-create'>Tarefas criadas <strong className='count-create'>{tasks.length}</strong></p>
+          <p className='p-completed'>Concluídas <strong className='count-completed'>{completedText}</strong></p>
         </div>
           
         {tasks == 0 
@@ -67,6 +75,7 @@ export default function GroupTask() {
               key={task} 
               content={task}
               onDeleteTask={deleteTask}
+              onCompleteTask={handleTaskComplete}
               />            
             )
           })}
